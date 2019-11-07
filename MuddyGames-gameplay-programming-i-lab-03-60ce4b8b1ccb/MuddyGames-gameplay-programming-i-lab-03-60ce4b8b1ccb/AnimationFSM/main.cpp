@@ -66,23 +66,31 @@ int main()
 			default:
 				input.setCurrent(Input::Action::IDLE);
 				break;
+
+
 			}
+
+			player.handleInput(input);
+
+			// Handle input to Player
+
+
+			// Update the Player
+			player.update();
+
+			// Clear screen
+			window.clear();
+
+			// Draw the Players Current Animated Sprite
+			window.draw(player.getAnimatedSprite());
+
+			// Update the window
+			window.display();
+
+
 		}
 
-		// Handle input to Player
-		player.handleInput(input);
 
-		// Update the Player
-		player.update();
-
-		// Clear screen
-		window.clear();
-
-		// Draw the Players Current Animated Sprite
-		window.draw(player.getAnimatedSprite());
-
-		// Update the window
-		window.display();
 	}
 
 	return EXIT_SUCCESS;

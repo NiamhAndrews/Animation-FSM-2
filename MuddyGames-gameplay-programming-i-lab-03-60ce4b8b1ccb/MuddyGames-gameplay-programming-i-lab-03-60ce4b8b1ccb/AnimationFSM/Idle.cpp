@@ -1,7 +1,8 @@
 #include <Idle.h>
 #include <Jumping.h>
 #include <Climbing.h>
-
+#include <WalkRight.h>
+#include "WalkLeft.h"
 #include <string>
 
 void Idle::handleInput() {}
@@ -13,9 +14,18 @@ void Idle::jumping(PlayerFSM* a)
 	a->setCurrent(new Jumping());
 	delete this;
 }
-void Idle::climbing(PlayerFSM* a)
+
+
+void Idle::walkRight(PlayerFSM* a)
 {
-	std::cout << "Idle -> Climbing" << std::endl;
-	a->setCurrent(new Climbing());
+	std::cout << "Idle -> WalkRight" << std::endl;
+	a->setCurrent(new WalkRight());
+	delete this;
+}
+
+void Idle::walkLeft(PlayerFSM* a)
+{
+	std::cout << "Idle -> WalkLeft" << std::endl;
+	a->setCurrent(new WalkLeft());
 	delete this;
 }

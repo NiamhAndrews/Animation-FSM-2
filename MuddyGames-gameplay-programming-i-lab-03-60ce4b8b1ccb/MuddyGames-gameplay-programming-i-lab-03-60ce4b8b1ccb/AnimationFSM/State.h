@@ -27,10 +27,6 @@ public:
 	{
 		DEBUG_MSG("State::Walking left");
 	}
-	virtual void crouching(PlayerFSM* a)
-	{
-		DEBUG_MSG("State::Crouching");
-	}
 	virtual void jumping(PlayerFSM* a)
 	{
 		DEBUG_MSG("State::Jumping");

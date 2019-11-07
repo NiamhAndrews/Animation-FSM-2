@@ -48,9 +48,6 @@
     <ClInclude Include="AnimatedSprite.h">
       <Filter>Header Files\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="Climbing.h">
-      <Filter>Header Files\FSM</Filter>
-    </ClInclude>
     <ClInclude Include="Idle.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
@@ -70,6 +67,21 @@
       <Filter>Header Files\Debug</Filter>
     </ClInclude>
     <ClInclude Include="PlayerFSM.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkRight.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="Falling.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="Climbing.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkLeft.h">
+      <Filter>Header Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="Landing.h">
       <Filter>Header Files\FSM</Filter>
     </ClInclude>
   </ItemGroup>
@@ -96,6 +108,15 @@
       <Filter>Source Files\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="PlayerMachine.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="Falling.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkRight.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkLeft.cpp">
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
   </ItemGroup>

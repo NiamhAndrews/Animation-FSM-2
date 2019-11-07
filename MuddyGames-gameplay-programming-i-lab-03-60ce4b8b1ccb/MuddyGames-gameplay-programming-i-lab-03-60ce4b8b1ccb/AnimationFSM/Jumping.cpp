@@ -1,18 +1,28 @@
 #include <Jumping.h>
-#include <Climbing.h>
+#include <Falling.h>
 #include <Idle.h>
-
+#include "WalkLeft.h"
+#include "WalkRight.h"
 #include <string>
 
-void Jumping::idle(PlayerFSM* a)
+
+void Jumping::falling(PlayerFSM* a)
 {
-	std::cout << "Jumping -> Idle" << std::endl;
-	a->setCurrent(new Idle());
+	std::cout << "Jumping -> Falling" << std::endl;
+	a->setCurrent(new Falling());
 	delete this;
 }
-void Jumping::climbing(PlayerFSM* a)
+
+void Jumping::walkLeft(PlayerFSM* a)
 {
-	std::cout << "Jumping -> Climbing" << std::endl;
-	a->setCurrent(new Climbing());
+	std::cout << "walkRight -> Jumping" << std::endl;
+	a->setCurrent(new WalkLeft());
+	delete this;
+}
+
+void Jumping::walkRight(PlayerFSM* a)
+{
+	std::cout << "walkLeft -> Jumping" << std::endl;
+	a->setCurrent(new WalkRight());
 	delete this;
 }
