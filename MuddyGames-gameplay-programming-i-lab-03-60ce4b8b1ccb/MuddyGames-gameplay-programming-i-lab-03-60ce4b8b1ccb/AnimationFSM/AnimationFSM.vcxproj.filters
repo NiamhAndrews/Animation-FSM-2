@@ -119,6 +119,9 @@
     <ClCompile Include="WalkLeft.cpp">
       <Filter>Source Files\FSM</Filter>
     </ClCompile>
+    <ClCompile Include="Landing.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">

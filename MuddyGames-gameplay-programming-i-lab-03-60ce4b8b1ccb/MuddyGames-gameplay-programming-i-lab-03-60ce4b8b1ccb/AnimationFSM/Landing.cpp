@@ -1,25 +1,25 @@
+#include "Landing.h"
 #include "Falling.h"
 #include "Idle.h"
 #include "Jumping.h"
-#include "Landing.h"
 
-void Falling::idle(PlayerFSM* a)
+void Landing::idle(PlayerFSM* a)
 {
-	std::cout << "Idle -> Falling" << std::endl;
+	std::cout << "Idle -> Landing" << std::endl;
 	a->setCurrent(new Idle());
 	delete this;
 }
 
-void Falling::jumping(PlayerFSM* a)
+void Landing::jumping(PlayerFSM* a)
 {
 	std::cout << "Jumping -> Falling" << std::endl;
 	a->setCurrent(new Jumping());
 	delete this;
 }
 
-void Falling::landing(PlayerFSM* a)
+void Landing::falling(PlayerFSM* a)
 {
 	std::cout << "Falling -> Landing" << std::endl;
-	a->setCurrent(new Landing());
+	a->setCurrent(new Falling());
 	delete this;
 }
