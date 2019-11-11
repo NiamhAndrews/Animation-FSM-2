@@ -11,8 +11,7 @@ public:
 	void idle(PlayerFSM* a);
 	void jumping(PlayerFSM* a);
 	void falling(PlayerFSM* a);
-	void walkRight(PlayerFSM* a);
-	void walkLeft(PlayerFSM* a);
+
 };
 
 #endif // !IDLE_H
