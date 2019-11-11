@@ -10,6 +10,7 @@ public:
 	~Falling() {};
 	void idle(PlayerFSM* a);
 	void jumping(PlayerFSM* a);
+	void landing(PlayerFSM* a);
 };
 
 #endif // !IDLE_H

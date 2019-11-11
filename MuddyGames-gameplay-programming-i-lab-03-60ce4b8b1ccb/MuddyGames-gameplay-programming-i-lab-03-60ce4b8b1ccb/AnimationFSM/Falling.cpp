@@ -1,6 +1,7 @@
 #include "Falling.h"
 #include "Idle.h"
 #include "Jumping.h"
+#include "Landing.h"
 
 void Falling::idle(PlayerFSM* a)
 {
@@ -11,7 +12,14 @@ void Falling::idle(PlayerFSM* a)
 
 void Falling::jumping(PlayerFSM* a)
 {
-	std::cout << "Idle -> Jumping" << std::endl;
+	std::cout << "Jumping -> Falling" << std::endl;
+	a->setCurrent(new Idle());
+	delete this;
+}
+
+void Falling::landing(PlayerFSM* a)
+{
+	std::cout << "Falling -> Landing" << std::endl;
 	a->setCurrent(new Idle());
 	delete this;
 }
